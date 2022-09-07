@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "declaration": true,
+    "declarationDir": "../compiled",
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "pretty": true,
+    "newLine": "CRLF",
+    "alwaysStrict": false,
+    "noImplicitUseStrict": true,
+    "strict": false,
+    "lib": ["esnext"],
+    // "baseUrl": "./",
+    "outDir": "../compiled",
+    //"declarationDir": "../../types",
+    // "types": ["@types/node"],
+    // "paths": {
+    //   "client/*": ["./*"],
+    //   "shared/*": ["../shared/*"]
+    // },
+    // "plugins": [
+    //   {
+    //     "transform": "typescript-transform-paths"
+    //   },
+    //   {
+    //     "transform": "typescript-transform-paths",
+    //     "afterDeclarations": true
+    //   }
+    // ]
+  },
+  // "include": ["./client/**/*.ts", "./server/**/*.ts", "./shared/**/*.ts"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/__tests__/*",
+    "**/lib/**",
+  ]
+}

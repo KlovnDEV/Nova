@@ -1,0 +1,193 @@
+.Dashboard {
+  &Wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  &Balance {
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 40px;
+  }
+
+  &Budget {
+    min-height: 130px;
+    margin-bottom: 10px;
+  }
+
+  &Chart {
+    min-height: 415px;
+    margin-bottom: 10px;
+  }
+
+  &More {
+    &Button {
+      width: calc(100% + 20px);
+      margin-bottom: -10px;
+      margin-left: -10px;
+      padding: 5px 10px;
+      border-radius: 0 0 5px 5px;
+      background-color: #ddd;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  &Organization {
+    display: grid;
+    grid-template-columns: 54% 40% 4%;
+    gap: 1%;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+
+    &Card {
+      min-height: 480px;
+      margin-bottom: 10px;
+    }
+
+    &Wrapper {
+      margin-right: 10px;
+    }
+
+    &Box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    &Name {
+      margin: 0 0 16px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    &Leader {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    &Balance {
+      margin: 0;
+      margin-right: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+
+      &Diff {
+        margin: 0;
+        color: rgb(70, 201, 44);
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+
+    &Details {
+      &Wrapper {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &Fill {
+    height: 100%;
+    border-radius: 3px;
+    background-color: rgb(21, 130, 173);
+
+    &Wrapper {
+      display: flex;
+      width: 100%;
+      height: 6px;
+      border: 1px solid #d6d6d6;
+      border-radius: 3px;
+      background-color: #fff;
+    }
+  }
+
+  &Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    margin-left: auto;
+    border-radius: 3px;
+    background-color: #dedede;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &Tax {
+    margin-bottom: 10px;
+
+    &Card {
+      display: grid;
+      grid-template-columns: 60% 20% 18%;
+      gap: 1%;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px 20px;
+
+      &:first-of-type {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-weight: 600;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      span {
+        &:nth-child(2) {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &Oil {
+    &Card {
+      display: grid;
+      grid-template-columns: 80% 19%;
+      gap: 1%;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px 20px;
+
+      &:first-of-type {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-weight: 600;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      span {
+        &:nth-child(2) {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

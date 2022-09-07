@@ -1,0 +1,31 @@
+@use 'libs/UI/Utils/position';
+@use 'libs/UI/Utils/animation';
+
+@function randomColor() {
+  $colors: #f44336, #ff9800, #ffeb3b, #8bc34a, #2196f3, #9c27b0;
+  @return lighten(nth($colors, random(length($colors))), 20%);
+}
+@function randomGradient() {
+  @return linear-gradient(217deg, randomColor(), transparent 70.71%),
+    linear-gradient(127deg, randomColor(), transparent 70.71%),
+    linear-gradient(336deg, randomColor(), transparent 70.71%);
+}
+
+.camera {
+  &__page {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    background-color: #333;
+  }
+
+  &__finder {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #666;
+  }
+}

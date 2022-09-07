@@ -1,0 +1,7 @@
+@use 'libs/UI/Utils/animation';
+
+.control {
+  &_ripple {
+    @include animation.ripple(rgba(0, 0, 0, 0.3), 2s);
+  }
+}

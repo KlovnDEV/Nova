@@ -1,0 +1,46 @@
+.Viewfinder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.Frame {
+  display: block;
+  width: 1660px;
+  height: 900px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 120px;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #0075ff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+
+  &:hover {
+    background-color: #005cc8;
+  }
+}

@@ -1,0 +1,39 @@
+.Progress {
+  height: 100%;
+
+  path {
+    &:first-child {
+      stroke: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &Wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.175s ease-in-out, margin 0.3s ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.Icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.Shadowed {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.25)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}

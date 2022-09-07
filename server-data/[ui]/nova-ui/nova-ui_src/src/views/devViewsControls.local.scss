@@ -1,0 +1,13 @@
+@use 'scss/utils' as *;
+
+.Controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  background-color: #000;
+}

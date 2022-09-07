@@ -1,0 +1,32 @@
+@use '../utils/vars' as *;
+
+.Theme-dark {
+  // colors
+  --color-bg: #{$dark-bg};
+  --color-bg-lighten: #{rgba($color: $dark-bg, $alpha: 0.82)};
+  --color-bg-alt: #{$dark-bg-alt};
+  --color-active: #{rgba($color: $dark-active, $alpha: 0.15)};
+  --color-active-gradient-from: #{rgba($color: $dark-active, $alpha: 1)};
+  --color-active-gradient-to: #{rgba($color: $dark-active, $alpha: 0)};
+  --color-active-border: #{rgba($color: $dark-active, $alpha: 0.6)};
+  --color-hover: #{rgba($color: $dark-active, $alpha: 0.15)};
+  --color-font: #{rgba($color: $dark-font, $alpha: 0.5)};
+  --color-font-active: #{rgba($color: $dark-font, $alpha: 1)};
+  --color-dark-grey: #{$dark-grey};
+  // typo
+  --font-family: #{$mainFont};
+  --font-size: 16px;
+  --font-small: 14px;
+  --font-regular: 18px;
+  --font-big: 22px;
+  --font-weight: 400;
+  --light: light;
+  --bold: bold;
+  --medium: medium;
+  --normal: normal;
+  --line-height: 1.25;
+  // box dimensions
+  --border-radius: 3px;
+
+  user-select: none;
+}

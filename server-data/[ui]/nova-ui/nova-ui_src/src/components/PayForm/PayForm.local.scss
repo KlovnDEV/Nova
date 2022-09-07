@@ -1,0 +1,62 @@
+@use 'scss/utils' as *;
+
+.PayForm {
+  display: grid;
+  grid-template-columns: 300px 150px;
+  justify-content: center;
+  justify-items: center;
+  height: min-content;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  &Header {
+    width: 100%;
+    margin-bottom: 16px;
+    font-weight: var(--medium);
+    font-size: var(--font-big);
+    text-align: center;
+  }
+
+  &Group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &Total {
+    color: var(--color-font-active);
+    font-weight: var(--medium);
+    font-size: 21px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  &Button {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px;
+
+    &Group {
+      border: 1px solid rgb(0 255 238 / 0.6);
+      border-radius: 6px;
+      background: #101314;
+    }
+
+    &Icon {
+      @include size(18px);
+
+      margin-right: 6px;
+    }
+  }
+
+  &Money {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+
+    p {
+      flex: 1 0 50%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/.git
+/.vscode
+/build
+node_modules
+/src/assets
+/src/scss
+/src/static
+.eslintrc.js
+*.scss
+*.html

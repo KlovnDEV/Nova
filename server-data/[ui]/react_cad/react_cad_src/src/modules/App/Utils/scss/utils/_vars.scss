@@ -1,0 +1,57 @@
+/* Vars:
+   ========================================================================== */
+
+// Font
+$mainFont: 'Roboto', sans-serif;
+$mainFontSize: 16px;
+$mainLineHeight: 1.4;
+$mainFontWeight: 400;
+$mainFontColor: #000;
+
+//colors
+$white: #fff;
+$black: #000;
+$primary: #152d69;
+$hover: #e3f2fd;
+$gray: #e0e0e0;
+$warning: #f2994a;
+$warning2: #faa61a;
+$success: #6fcf97;
+$sucess2: #0dc143;
+$danger: #eb5757;
+$cyan: #0090a6;
+$backdrop: rgba(39, 39, 39, 0.45); // hex #272727 opacity 0.45
+$primary: #1976d2;
+$important: rgb(220, 0, 78);
+$start: #30a018;
+$stop: rgb(220, 0, 58);
+$text-light: #fff;
+$text-dark: #000;
+$button-dark: #555;
+$white: #fff;
+$gradient:
+  linear-gradient(217deg, #82c4f8, transparent 70.71%),
+  linear-gradient(127deg, #ca61dc, transparent 70.71%),
+  linear-gradient(336deg, #82c4f8, transparent 70.71%);
+$gradient2:
+  linear-gradient(217deg, #ca61dc, transparent 70.71%),
+  linear-gradient(127deg, #ca61dc, transparent 70.71%),
+  linear-gradient(336deg, #bcdc97, transparent 70.71%);
+
+// grid
+$grid-desktop: 12;
+$grid-desktop-gap-col: 40px;
+$grid-desktop-gap-row: 20px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+$container-max-widths: (
+  sm: 556px,
+  md: 748px,
+  lg: 972px,
+  xl: 1160px,
+);

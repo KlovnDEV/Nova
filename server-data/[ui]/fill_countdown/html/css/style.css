@@ -1,0 +1,25 @@
+@font-face {
+	font-family: 'bankgothic';
+	src: url('../fonts/bankgothic.ttf')
+}
+
+.container {
+    font-family: bankgothic;
+    color: #ffb700;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.timer {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.jst-minutes {
+    float: left;
+}
+
+.jst-seconds {
+    float: left;
+}

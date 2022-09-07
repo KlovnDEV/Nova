@@ -1,0 +1,79 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/app.css" />
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/3d492e379f.js" crossorigin="anonymous"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="sellContainer">
+            <div id="menu" class="dialog">
+                <div class="head">
+                    <i class="fas fa-bars"></i>
+                    <span>Los Santos Mall</span>
+                </div>
+                <div class="content">
+                    <div class="content-note">&nbsp;</div>
+                    <div class="search-wrapper">
+                        <div class="search">
+                            <select id="sellItems">
+                                <option value="" disabled selected hidden>Выбери товар для продажи...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="user-input">
+                        <input type="text" name="qty" placeholder="Количество"/>
+                        <i class="fas fa-calculator" id="calc"></i>
+                        <input type="text" name="price" placeholder="Цена"/>
+                        <i class="fas fa-dollar-sign" id="price"></i>
+                    </div>
+                    <div class="content-note">&nbsp;</div>
+                </div>
+                <div class="footer">
+                    <div id="sell-submit" class="button"><span>Продать</span></div>
+                    <div id="sell-cancel" class="button"><span>Отмена</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buyContainer">
+            <div class="head">
+                <i class="fas fa-bars"></i>
+                <span>Los Santos Mall</span>
+            </div>
+            <div class="content-note">&nbsp;</div>
+            <div class="search">
+                <select id="buyItems">
+                    <option value="" disabled selected hidden>Выбери товар для покупки...</option>
+                </select>
+            </div>
+            <div class="content-note">&nbsp;</div>
+            <div class="mainTable">
+                <table class="content-table" id="buyTable">
+                    <thead>
+                      <tr>
+                        <th class="icon"><i class="fas fa-image"></i></th>
+                        <th><i class="fas fa-file-signature"></i> Наименование</th>
+                        <th><i class="fas fa-user"></i> Продавец</th>
+                        <th><i class="fas fa-warehouse"></i> В наличии</th>
+                        <th><i class="fas fa-money-check-alt"></i> Цена</th>
+                        <th><i class="fas fa-calculator"></i> Количество</th>
+                        <th class="icon"><i class="fab fa-cc-amex"></i></th>
+                      </tr>
+                    </thead>
+                    <tbody id="gridTable">
+                    </tbody>
+                  </table>
+            </div>
+            <div class="content-note">&nbsp;</div>
+            <div class="footer">
+                <div id="buy-search" class="button"><span>Поиск</span></div>
+                <div id="buy-submit" class="button"><span>Купить</span></div>
+                <div id="buy-cancel" class="button"><span>Отмена</span></div>
+            </div>
+        </div>
+
+		<!--<script src="nui://game/ui/jquery.js" type="text/javascript"></script>-->
+	</body>
+</html>

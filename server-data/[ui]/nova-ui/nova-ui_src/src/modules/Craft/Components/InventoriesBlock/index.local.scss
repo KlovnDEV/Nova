@@ -1,0 +1,15 @@
+@use 'scss/utils' as *;
+
+.Inventory {
+  width: min-content;
+}
+
+.ComponentWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  color: var(--font-color-active);
+  font-size: var(--font-regular);
+}

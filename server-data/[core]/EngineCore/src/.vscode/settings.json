@@ -1,0 +1,36 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "crlf",
+  "prettier.tabWidth": 2,
+  "prettier.requireConfig": true,
+  "prettier.printWidth": 100,
+  "prettier.requirePragma": true,
+  "prettier.resolveGlobalModules": true,
+  "prettier.singleQuote": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "typescript.tsdk": "node_modules\\ttypescript\\lib",
+  "workbench.colorCustomizations": {
+    // "activityBar.background": "#f00",
+    "titleBar.activeBackground": "#492216"
+    // "statusBar.background": "#f00"
+  },
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/.DS_Store": false
+  },
+  "explorerExclude.backup": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  }
+}

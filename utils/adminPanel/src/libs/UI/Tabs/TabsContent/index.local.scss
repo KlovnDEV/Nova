@@ -1,0 +1,32 @@
+@use 'scss/utils' as *;
+
+.Tabs {
+  position: relative;
+  height: 100%;
+  padding: 5px;
+  border-radius: var(--border-radius);
+
+  &Content {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.Fade {
+  &-left {
+    @include fade();
+  }
+
+  &-right {
+    @include fade('right');
+  }
+
+  &-none {
+    @include fade('none');
+  }
+}

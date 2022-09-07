@@ -1,0 +1,27 @@
+@use 'libs/UI/Utils/colors';
+@use 'libs/UI/Utils/elevation';
+
+.drawer {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  background-color: colors.$white;
+  transition: max-height 400ms ease-in-out, box-shadow 400ms ease-in-out;
+
+  &-bottom {
+    @extend .drawer;
+
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.is-expanded {
+    max-height: 100%;
+  }
+}

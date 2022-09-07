@@ -1,0 +1,131 @@
+@use 'scss/utils' as *;
+
+
+.playerpanel {
+
+  &__top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+  }
+
+  &__topbuttons {
+    button {
+      width: 100px;
+      margin: 2px;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    padding: 5px;
+    top: 10%;
+    right: 20%;
+    width: 500px;
+    height: 700px;
+    max-height: 700px;
+    background-color: black;
+    box-shadow: 2px 3px 4px 5px rgba(0, 0, 0, 0.438);
+    overflow: auto;
+
+    h1 {
+      // background: linear-gradient(0deg, transparent 0%, #2499ff 7%, transparent 15%, transparent);
+      // border-bottom: 2px solid #2499ff;
+      padding-bottom: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 1em;
+      background-color: #222;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: rgb(11, 122, 196);
+    // outline: 1px solid slategrey;
+    border-radius: 8px;
+    border: 5px solid #222;
+    }
+
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__statuses {
+    margin-top: 5px;
+    width: 100%;
+    background-color:#191919;
+
+    td {
+      padding: 15px 5px 15px 10px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #222;
+    }
+  }
+}
+
+.map {
+  &__wrapper {
+    // background-color: #222948;
+    background-color: #0fa8d2;
+    box-shadow: 1px 2px 2px 2px rgb(0 0 0 / 44%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%  ;
+    position: absolute;
+    left: 0;
+    top: 0;
+    user-select: none;
+  }
+
+  &__coords {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  &__body {
+    // pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+
+    user-select: none;
+
+    // svg {
+    //   overflow: visible;
+    //   user-select: none;
+    // }
+  }
+
+  // &__image {
+  //   position: relative;
+  //   left: -4431px;
+  //   top: -7684px;
+  //   background: transparent;
+  //   background-image: linear-gradient(#344261 10px, transparent 1px), linear-gradient(90deg, #344261 10px, transparent 1px);
+  //   background-size: 1000px 1000px;
+  //   background-position: 4431px 7684px;
+
+  // }
+}
+
+

@@ -1,0 +1,108 @@
+@use 'scss/utils' as *;
+
+.Item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  background-color: var(--color-dark-grey);
+  transition: all 0.3s ease;
+
+  &.circle {
+    border-radius: 100%;
+    background-color: transparent;
+
+    .Children {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .Backdrop {
+      @extend %unsliced-border;
+
+      border-width: 4px;
+      border-radius: 100%;
+      transition: all 0.3s ease;
+    }
+
+    &.is-active,
+    &:active {
+      .Backdrop {
+        @extend %backdrop-active;
+
+        border-width: 4px;
+        border-color: var(--color-font-active);
+        box-shadow: unset;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      .Backdrop {
+        @extend %backdrop-hover;
+
+        border-width: 4px;
+        border-color: var(--color-font-active);
+        box-shadow: unset;
+      }
+    }
+  }
+
+  &:hover {
+    .Backdrop {
+      @extend %backdrop-hover-slice;
+
+      border-width: 2px;
+    }
+  }
+
+  &:focus,
+  &:active {
+    .Backdrop {
+      @extend %backdrop-hover-slice;
+
+      border-width: 2px;
+      box-shadow: inset 4px 4px 16px var(--color-active);
+    }
+  }
+
+  &.is-active {
+    .Backdrop {
+      @extend %backdrop-active;
+
+      border-width: 2px;
+    }
+  }
+}
+
+.Input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  width: 0;
+  height: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.Children {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.Backdrop {
+  @extend %backdrop;
+
+  z-index: 1;
+  border: 2px solid transparent;
+  border-image-slice: 1;
+  background-color: transparent;
+  transition: unset;
+}

@@ -1,0 +1,13 @@
+@use '../utils/_mixins.scss' as *;
+
+.Theme-light {
+  --color-bg: #232323;
+  --color-bg-alt: #d10505;
+  --color-active: rgb(53, 187, 178);
+  --color-hover: rgba(0, 255, 238, 0.15);
+  --color-font: rgba(0, 0, 0, 0.5);
+  --color-font-active: rgb(93, 161, 70);
+  --font-size: 14px;
+  --font-weight: bolder;
+  --line-height: 1.7;
+}

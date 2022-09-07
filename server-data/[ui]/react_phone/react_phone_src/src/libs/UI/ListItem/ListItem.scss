@@ -1,0 +1,45 @@
+@use 'libs/UI/Utils/animation';
+
+.list-item {
+  @include animation.ripple(rgba(0, 0, 0, 0.3), 2s);
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  background-position: center;
+  cursor: pointer;
+  user-select: none;
+
+  &:focus {
+    border: 2px solid #777;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+}

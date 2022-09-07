@@ -1,0 +1,26 @@
+@use 'scss/utils' as *;
+
+.Wrapper {
+  position: relative;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 360px 1fr 360px;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.Column {
+  @extend %scroll;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  place-content: center stretch;
+
+  [class*='Tabs__'] {
+    overflow: unset;
+  }
+}

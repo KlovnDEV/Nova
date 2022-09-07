@@ -1,0 +1,26 @@
+.link {
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  &Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    svg {
+      fill: rgb(12, 146, 208);
+      width: 32px;
+      display: block;
+    }
+  }
+
+}

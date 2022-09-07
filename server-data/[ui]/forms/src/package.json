@@ -1,0 +1,73 @@
+{
+	"name": "json2html",
+	"version": "1.0.0",
+	"description": "json",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
+		"build": "webpack --config ./build/webpack.build.conf.js",
+		"lint": "eslint --debug src/",
+		"lint:write": "eslint --debug src/ --fix",
+		"server": "json-server --watch ./src/server/db.json"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 3 version"
+	],
+	"author": "https://github.com/mderkach",
+	"keywords": [
+		"webpack",
+		"webpack4",
+		"merge",
+		"babel",
+		"babel7",
+		"scss",
+		"pug"
+	],
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.11.1",
+		"@babel/preset-env": "^7.11.0",
+		"autoprefixer": "^9.8.6",
+		"babel-loader": "^8.1.0",
+		"browser-sync": "^2.26.12",
+		"browser-sync-webpack-plugin": "^2.2.2",
+		"copy-webpack-plugin": "^6.0.3",
+		"css-loader": "^4.2.1",
+		"css-mqpacker": "^7.0.0",
+		"cssnano": "^4.1.10",
+		"eslint": "^7.6.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-config-node": "^4.1.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-babel": "^5.3.1",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-prettier": "^3.1.4",
+		"eslint-plugin-react": "^7.20.5",
+		"eslint-plugin-react-hooks": "^4.0.8",
+		"file-loader": "^6.0.0",
+		"html-webpack-plugin": "^4.3.0",
+		"json-server": "^0.16.1",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.14.1",
+		"postcss-loader": "^3.0.0",
+		"prettier": "^2.0.5",
+		"pug": "^3.0.0",
+		"pug-loader": "^2.4.0",
+		"sass-loader": "^9.0.3",
+		"style-loader": "^1.2.1",
+		"terser-webpack-plugin": "^4.0.0",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-merge": "^5.1.1"
+	},
+	"dependencies": {
+		"axios": "^0.19.2",
+		"bootstrap": "^4.5.2",
+		"jquery": "^3.5.1",
+		"popper.js": "^1.16.1"
+	}
+}

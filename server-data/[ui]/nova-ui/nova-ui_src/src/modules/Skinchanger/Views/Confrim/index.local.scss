@@ -1,0 +1,77 @@
+@use 'scss/utils' as *;
+
+.Wrpapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(16, 19, 20, 0) 0%, rgba(16, 19, 20, 0.5) 100%);
+}
+
+.Button {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 170px;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--color-font-active);
+  font-weight: var(--medium);
+  font-size: calc(var(--font-big) + 6px);
+  line-height: 1;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.35);
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    .ButtonConfirm {
+      width: 100%;
+      background-image: linear-gradient(90deg, #0fe 17.71%, rgba(0, 255, 238, 0) 100%);
+    }
+
+    .ButtonDecline {
+      width: 100%;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+      transform-origin: right center;
+    }
+  }
+
+  [class~='inherit'] {
+    position: relative;
+    z-index: 2;
+  }
+
+  &Confirm,
+  &Decline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 0;
+    height: 100%;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &Confirm {
+    left: 0;
+  }
+
+  &Decline {
+    right: 0;
+  }
+}

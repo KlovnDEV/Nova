@@ -1,0 +1,109 @@
+// global uils
+
+@use './utils' as *;
+@use './themes/dark' as *;
+@use './themes/light' as *;
+@use './utils/reset' as *;
+@use './utils/fonts' as *;
+
+body {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: white;
+}
+
+button {
+  color: #fff;
+  background: #007acc;
+
+  &:disabled {
+    background: #b4b4b4;
+  }
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1px 1fr;
+
+  width: 100%;
+  height: 100%;
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  &__topbar {
+    grid-column: 1/-1;
+    grid-row: 1;
+    box-shadow: 0 4px 4px 2px #0000004f;
+    z-index: 2;
+  }
+
+  &__leftbar {
+    grid-column: 1;
+    grid-row: 2;
+    box-shadow: 2px 4px 4px 2px #0000004f;
+    z-index: 1;
+    padding: 3px;
+
+    &_button {
+      width: 32px;
+      height: 32px;
+      background: #2b6a96;
+      box-shadow: 0px 1px 0px 1px #304b88;
+      border-radius: 3px;
+    }
+  }
+
+  &__leftpanel {
+    width: 200px;
+    height: 100%;
+  }
+}
+
+.Theme {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: var(--color-font);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  transition: opacity 0.3s ease;
+}
+
+.inherit {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  &-color {
+    color: inherit;
+  }
+
+  &-fw {
+    font-weight: inherit;
+  }
+
+  &-fs {
+    font-size: inherit;
+  }
+
+  &-lh {
+    line-height: inherit;
+  }
+}

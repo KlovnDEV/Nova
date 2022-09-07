@@ -1,0 +1,61 @@
+.tax {
+  &Head {
+    grid-column: 1/-1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &Button {
+    &Wrapper {
+      margin: 10px 0;
+    }
+  }
+
+  &Content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 600px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  &Chart {
+    height: 600px;
+  }
+}
+
+.Dashboard {
+  &Tax {
+    &Card {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 1%;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px 20px;
+
+      &:first-of-type {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-weight: 600;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      span {
+        &:nth-child(2) {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

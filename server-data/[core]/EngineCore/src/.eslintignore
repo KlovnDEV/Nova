@@ -1,0 +1,5 @@
+/.git
+/.vscode
+/lib
+node_modules
+.eslintrc.js

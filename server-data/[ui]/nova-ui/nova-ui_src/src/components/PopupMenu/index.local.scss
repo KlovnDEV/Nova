@@ -1,0 +1,23 @@
+@use 'scss/utils' as *;
+
+.Group {
+  position: absolute;
+  width: auto;
+  height: auto;
+  border: 1px solid var(--color-active-border);
+  background-color: var(--color-bg);
+  box-shadow: 2px 10px 10px 0 rgba(0, 0, 0, 0.69);
+}
+
+.Layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1300;
+}
+
+.Button {
+  padding: 8px 32px;
+}

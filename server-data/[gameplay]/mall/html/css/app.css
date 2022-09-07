@@ -1,0 +1,349 @@
+@font-face {
+    font-family: dejavu;
+    src: url('../fonts/dejavu.ttf');
+}
+
+.sellContainer {
+    display: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 250px;
+    margin-left: -400px;
+    /*half width*/
+    margin-top: -125px;
+    /*half height*/
+}
+
+.sellContainer .content {
+    position: relative;
+    background: #454b5b;
+    ;
+}
+
+.content-note {
+    position: relative;
+    background: #454b5b;
+    line-height: 2px;
+    border-top: 1px solid rgba(40, 45, 60);
+    border-bottom: 1px solid rgba(40, 45, 60);
+}
+
+.sellContainer .search-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.sellContainer .user-input {
+    position: relative;
+    display: inline-block;
+    width: 237px;
+    text-align: right;
+}
+
+.sellContainer .user-input input[type=text] {
+    font-size: 12px;
+    width: 110px;
+    height: 25px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.sellContainer .user-input #calc {
+    color: #1a79c6;
+    position: absolute;
+    right: 118px;
+    top: 4px;
+}
+
+.sellContainer .user-input #price {
+    color: #1a79c6;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+}
+
+.sellContainer .search {
+    position: relative;
+    display: flex;
+    width: 540px;
+    height: 3em;
+    line-height: 3;
+    background: #313643;
+    overflow: hidden;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.search::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+    background: rgba(40, 45, 60);
+}
+
+.search:hover::after {
+    color: rgba(9, 154, 225);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #454b5b;
+    color: #FFF;
+    flex: 1;
+    padding: 0 .5em;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+select option {
+    background: rgba(67, 74, 92);
+    color: rgba(208, 210, 215);
+}
+
+.sellContainer .head {
+    font-family: dejavu;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(40, 45, 60);
+    border: 2px solid rgba(40, 45, 60);
+    height: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.sellContainer .head i {
+    color: rgba(9, 154, 225);
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.sellContainer .content {
+    position: relative;
+}
+
+.sellContainer .content>textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    background: rgba(67, 74, 92);
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 8px;
+    padding-top: 3px;
+}
+
+.sellContainer .content>input {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    width: 100%;
+    height: 40px;
+    background: rgba(67, 74, 92);
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 8px;
+    padding-top: 3px;
+}
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(40, 45, 60);
+    border: 2px solid rgba(40, 45, 60);
+    height: 50px;
+    line-height: 50px;
+    color: rgba(208, 210, 215);
+    font-family: dejavu;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer .button {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 140px;
+    background: #1a79c6;
+}
+
+.footer .button>span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* buy container */
+
+.buyContainer {
+    display: none;
+    position: relative;
+    left: 50%;
+    top: 32%;
+    width: 800px;
+    margin-left: -400px;
+    /*half width*/
+    margin-top: -125px;
+    /*half height*/
+}
+
+.buyContainer .head {
+    font-family: dejavu;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(40, 45, 60);
+    border: 2px solid rgba(40, 45, 60);
+    height: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.buyContainer .head i {
+    color: rgba(9, 154, 225);
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.buyContainer .mainTable {
+    position: flex;
+    border: 1px solid rgba(40, 45, 60);
+    background: rgba(40, 45, 60, 0.9);
+    align-content: center;
+    text-align: center;
+    max-height: 510px;
+    overflow-y: scroll;
+}
+
+.content-table {
+    display: none;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    width: 99%;
+    max-height: 510px !important;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.content-table::-webkit-scrollbar, .mainTable::-webkit-scrollbar {
+    width: 1px;
+}
+
+.content-table thead tr {
+    background-color: rgba(40, 45, 60);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.content-table i {
+    color: rgba(9, 154, 225);
+    padding-right: 5px;
+}
+
+.content-table .icon {
+    text-align: center;
+}
+
+.content-table .right {
+    text-align: right;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+    color: #ffffff;
+}
+
+.content-table tr {
+    border: 1px solid rgba(40, 45, 60);
+}
+
+.content-table tr:hover {
+    background: rgba(61, 71, 98);
+}
+
+.content-table input {
+    width: 40px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+.buyContainer .search {
+    position: relative;
+    display: flex;
+    height: 3em;
+    line-height: 3;
+    background: #313643;
+    overflow: hidden;
+}
+
+input[type=radio].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+    
+input[type=radio].with-font ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";
+    letter-spacing: 10px;
+    font-size: 1.2em;
+    color: #1a79c6;
+    width: 1.4em;
+}
+
+input[type=radio].with-font:checked ~ label:before  {
+    content: "\f00c";
+    font-size: 1.2em;
+    color: #1a79c6;
+    letter-spacing: 5px;
+}
+
+input[type=radio].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label
+{                
+    color: #1a79c6;
+}
+

@@ -1,0 +1,158 @@
+@use 'scss/utils' as *;
+
+.ShopCart {
+  display: grid;
+  grid-template-rows: max-content 1fr min-content;
+  grid-row: 1/3;
+  height: 100%;
+  padding: 25px 5px 0 0;
+
+  &Grid {
+    @extend %scroll;
+
+    overflow: auto;
+    height: calc(100% - 10px);
+    margin-right: -10px;
+    padding-right: 10px;
+  }
+
+  &Header {
+    margin-bottom: 20px;
+  }
+
+  &Info {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: center;
+    justify-items: end;
+    // margin-top: 10px;
+
+    &Header {
+      width: 100%;
+      margin-bottom: 16px;
+      font-weight: var(--medium);
+      font-size: var(--font-big);
+      text-align: right;
+    }
+
+    &Group {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &Total {
+      color: var(--color-font-active);
+      font-weight: var(--medium);
+      font-size: 21px;
+      line-height: 1.25;
+      text-align: right;
+    }
+
+    &Button {
+      display: flex;
+      flex-direction: row;
+      padding: 5px 20px;
+
+      &Group {
+        border: 1px solid rgba(0, 255, 238, 0.6);
+        border-radius: 6px;
+        background: #101314;
+      }
+
+      &Icon {
+        @include size(18px);
+
+        margin-right: 6px;
+      }
+    }
+
+    &Money {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5px;
+
+      p {
+        flex: 1 0 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.Cart {
+  &Item {
+    display: grid;
+    grid-auto-columns: minmax(180px, 1fr);
+    grid-auto-flow: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &Count {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .CartItemText {
+        flex: 0 0 auto;
+        text-align: left;
+      }
+    }
+
+    &Quantity,
+    &Price {
+      flex: 0 0 90px;
+      width: 100%;
+      width: 90px;
+      padding: 5px 10px;
+
+      input {
+        font-size: var(--font-small);
+      }
+    }
+
+    &Info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &Text {
+      color: var(--color-font-active);
+    }
+
+    &Descr,
+    &Text {
+      font-weight: var(--medium);
+      font-size: var(--font-small);
+      text-align: center;
+      word-break: break-all;
+    }
+
+    &Image {
+      width: 32px;
+      min-width: 32px;
+      max-width: 32px;
+      height: 32px;
+      min-height: 32px;
+      max-height: 32px;
+      margin-right: 10px;
+    }
+  }
+
+  &Delete {
+    width: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,33 @@
+.phone {
+  &__wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 500px;
+    height: 1000px;
+    background-size: cover;
+  }
+
+  &__cover {
+    position: absolute;
+    z-index: 999;
+    width: 500px;
+    height: 1000px;
+    pointer-events: none;
+  }
+
+  &__screen {
+    position: relative;
+    top: 100px;
+    right: 50px;
+    bottom: 100px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 400px;
+    height: 80%;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+	},
+	"prettier.insertPragma": true,
+	"prettier.eslintIntegration": true,
+	"prettier.stylelintIntegration": true,
+	"prettier.arrowParens": "avoid",
+	"prettier.endOfLine": "crlf",
+	"prettier.requireConfig": true,
+	"prettier.printWidth": 100,
+	"prettier.requirePragma": true,
+	"prettier.resolveGlobalModules": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+}

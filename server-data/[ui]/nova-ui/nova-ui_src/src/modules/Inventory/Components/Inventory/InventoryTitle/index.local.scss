@@ -1,0 +1,29 @@
+@use 'scss/utils' as *;
+
+.Title {
+  color: var(--color-font-active);
+  font-weight: var(--bold);
+  font-size: var(--font-big);
+
+  &Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.Close {
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
+  color: var(--color-active-border);
+  outline: none !important;
+  font-size: 25px;
+  text-shadow: 0 0 4px var(--color-bg);
+
+  &:hover {
+    text-shadow: 0 0 8px var(--color-bg);
+  }
+}

@@ -1,0 +1,11 @@
+.home {
+  &__screen {
+    background-color: transparent;
+
+    &_grid {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 40px); // fix for s20 and note20 grids
+    }
+  }
+}

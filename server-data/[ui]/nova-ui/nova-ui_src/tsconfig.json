@@ -1,0 +1,98 @@
+{
+  "compileOnSave": true,
+  "incremental": true,
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "../html/",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "types": ["node", "react", "webpack-env"],
+    "rootDir": "./src/",
+    "baseUrl": "./src",
+    "paths": {
+      "~cmp/*": ["components/*"],
+      "~m/*": ["modules/*"],
+      "~v/*": ["views/*"]
+    },
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react",
+    "allowJs": false,
+    "alwaysStrict": false,
+    "checkJs": false,
+    "noEmitOnError": false,
+    "noEmitHelpers": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitUseStrict": false,
+    "pretty": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "target": "ES2015",
+    "watch": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "allowUmdGlobalAccess": false,
+    "assumeChangesOnlyAffectDirectDependencies": false,
+    "charset": "utf8",
+    "declaration": false,
+    "declarationMap": false,
+    "diagnostics": true,
+    "disableSizeLimit": false,
+    "emitBOM": false,
+    "emitDeclarationOnly": false,
+    "emitDecoratorMetadata": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "extendedDiagnostics": false,
+    "forceConsistentCasingInFileNames": false,
+    "inlineSources": false,
+    "inlineSourceMap": false,
+    "isolatedModules": false,
+    "listFiles": false,
+    "listEmittedFiles": false,
+    "mapRoot": ".",
+    "maxNodeModuleJsDepth": 0,
+    "moduleResolution": "Node",
+    "newLine": "CRLF",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitReturns": false,
+    "noLib": false,
+    "noResolve": false,
+    "noStrictGenericChecks": false,
+    "plugins": [{
+      "name": "typescript-plugin-css-modules",
+      "options": {
+        "postCssOptions": {
+          "useConfig": true
+        }
+      }
+    }],
+    "preserveConstEnums": false,
+    "preserveSymlinks": false,
+    "sourceRoot": ".",
+    "skipLibCheck": false,
+    "skipDefaultLibCheck": false,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "stripInternal": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "traceResolution": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "node_modules"
+  ]
+}

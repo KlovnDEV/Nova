@@ -1,0 +1,25 @@
+.Native {
+  width: 100%;
+  padding: 15px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1876em;
+  letter-spacing: 0.00938em;
+  cursor: text;
+}
+
+.Wrapper {
+  &[class~='fullwidth'] {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+
+  &[class~='readonly'] {
+    pointer-events: none;
+    appearance: none;
+  }
+}

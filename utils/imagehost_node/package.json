@@ -1,0 +1,27 @@
+{
+  "name": "dbbridge_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --trace-warnings index.js",
+    "debug": "set --trace-warnings DEBUG=express:* & node index.js"
+  },
+  "author": "Sadler",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "file-url": "^3.0.0",
+    "image-data-uri": "^2.0.1",
+    "mariadb": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

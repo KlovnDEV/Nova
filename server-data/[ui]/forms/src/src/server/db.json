@@ -1,0 +1,242 @@
+{
+   "tab1": {
+      "type":"tab-pane",
+      "id":"tab-tax",
+      "active":true,
+      "children": [
+         {
+            "type":"table",
+            "children":[
+               {
+                  "type":"head",
+                  "children":[
+                     {
+                        "type":"row",
+                        "children":[
+                           {
+                              "type":"col",
+                              "text":"Название"
+                           },
+                           {
+                              "type":"col",
+                              "text":"Процент"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "type":"body",
+                  "children":[
+                     {
+                        "type":"row",
+                        "children":[
+                           {
+                              "type":"col",
+                              "text":"НДС"
+                           },
+                           {
+                              "type":"col",
+                              "children": [
+                                 {
+                                    "type": "input",
+                                    "name": "tax1",
+                                    "text": "30"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "type":"row",
+                        "children":[
+                           {
+                              "type":"col",
+                              "text":"Подоходный"
+                           },
+                           {
+                              "type":"col",
+                              "children": [
+                                 {
+                                    "type": "input",
+                                    "name": "tax2",
+                                    "text": "40"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "type":"col",
+            "children":[
+               {
+                  "id":"submit_tax",
+                  "type":"submit",
+                  "modifier":"success",
+                  "size":"large",
+                  "text":"Отправить",
+                  "target":"http://forms/onSubmit"
+               }
+            ]
+         }
+      ]
+   },
+
+   "tab2": {
+      "type":"tab-pane",
+      "id":"tab-budget",
+      "children": [
+         {
+            "type":"form",
+            "children":[
+               {
+                  "type":"button-group",
+                  "children":[
+                     {
+                        "type":"button",
+                        "modifier":"danger",
+                        "size":"small",
+                        "disabled":true,
+                        "text":"Что-то ещё"
+                     }
+                  ]
+               },
+               {
+                  "type":"input",
+                  "label":"АПИСАНИЙЕ",
+                  "name":"some",
+                  "text":"АБВ"
+               }
+            ]
+         }
+      ]
+   },
+
+   "tab3": {
+      "type":"tab-pane",
+      "id":"tab-pane3",
+      "children": [
+         {
+            "type": "ref",
+            "name": "test1"
+         }
+      ]
+   },
+
+   "test1": {
+      "type": "div",
+      "children": [
+         {
+            "type": "ref",
+            "name": "test2"
+         },
+         {
+            "type": "div",
+            "text": "TEST1 "
+         }
+      ]
+   },
+
+   "test2": {
+      "type": "div",
+      "children": [
+         {
+            "type": "ref",
+            "name": "test3"
+         },
+         {
+            "type": "div",
+            "text": "TEST2 "
+         }
+      ]
+   },
+
+   "test3": {
+      "type": "div",
+      "children": [
+         {
+            "type": "ref",
+            "name": "test4"
+         },
+         {
+            "type": "div",
+            "text": "TEST3 "
+         }
+      ]
+   },
+
+   "test4": {
+      "type": "div",
+      "children": [
+         {
+            "type": "div",
+            "text": "TEST4 "
+         }
+      ]
+   },
+
+
+   "index": {
+      "type":"card",
+      "title": "Мэрия",
+      "class":"mx-auto my-auto",
+      "width": "600px",
+      "height": "400px",
+      "children": [
+         {
+            "type": "form",
+            "name": "tax-form",
+            "children":[
+               {
+                  "type":"tabs",
+                  "children":[
+                     {
+                        "type":"tab",
+                        "id":"tab1",
+                        "href":"tab-tax",
+                        "active":true,
+                        "text":"Налоги",
+                        "width":"30%"
+                     },
+                     {
+                        "type":"tab",
+                        "id":"tab2",
+                        "href":"tab-budget",
+                        "text": "Бюджет",
+                        "width":"30%"
+                     },
+                     {
+                        "type":"tab",
+                        "id":"tab3",
+                        "href":"tab-pane3",
+                        "text":"Лицензии",
+                        "width":"30%"
+                     }
+                  ]
+               },
+               {
+                  "type":"tab-content",
+                  "children" : [
+                     {
+                        "type": "ref",
+                        "name": "tab1"
+                     },
+                     {
+                        "type": "ref",
+                        "name": "tab2"
+                     },
+                     {
+                        "type": "ref",
+                        "name": "tab3"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+   }

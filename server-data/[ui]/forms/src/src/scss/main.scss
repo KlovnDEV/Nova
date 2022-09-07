@@ -1,0 +1,12 @@
+@import 'utils/vars';
+@import 'utils/libs';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/reset';
+
+//pages
+@import '../views/pages/index';
+
+body {
+    background-color: transparent;
+}

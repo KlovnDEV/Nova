@@ -1,0 +1,54 @@
+@mixin ripple($color, $time) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    /* Center the ripple */
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-radius: 50%;
+    background-color: $color;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform $time ease, opacity ($time * 0.33) ease;
+    transform: scale(10);
+    transform-origin: center;
+  }
+
+  &:active {
+    &::after {
+      opacity: 1;
+      transition: unset;
+      transform: scale(0);
+    }
+  }
+}
+@mixin cycle-scale($time, $infinite: infinite) {
+  @keyframes keyframes-cycle-scale {
+    from {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+
+    to {
+      transform: scale(1, 1);
+    }
+  }
+
+  animation: keyframes-cycle-scale $time ease-in-out $infinite;
+}
+// &:active {
+//   img {
+//     animation: app-button-click 0.1s ease-in-out 1;
+//   }
+// }

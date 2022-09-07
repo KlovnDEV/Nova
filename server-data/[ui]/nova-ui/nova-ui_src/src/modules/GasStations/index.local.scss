@@ -1,0 +1,149 @@
+@use 'scss/utils' as *;
+
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.Body {
+  width: 100%;
+  height: auto;
+}
+
+.Title {
+  font-weight: var(--light);
+  font-size: var(--font-big);
+  text-shadow: -1px 3px 4px var(--color-bg-lighten);
+}
+
+.Descr {
+  padding-bottom: 34px;
+  color: var(--color-font-active);
+  font-size: var(--font-regular);
+  text-shadow: -1px 3px 4px #000000b0;
+}
+
+.Info {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+
+  &Header {
+    padding-bottom: 8px;
+    color: var(--color-font-active);
+  }
+
+  &Left {
+    flex-shrink: 1;
+    width: 100%;
+    margin-right: 8px;
+  }
+
+  &Right {
+    display: flex;
+    flex-shrink: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 48px;
+  border-radius: var(--border-radius);
+  color: var(--color-font-active);
+  box-shadow: inset 0 0 5px 0 var(--color-bg-lighten);
+  text-align: center;
+  text-shadow: 0 0 3px var(--color-bg-lighten);
+  cursor: pointer;
+
+  &Xero {
+    background-color: #51b8e8;
+
+    &:hover {
+      background-color: #61c5f3;
+    }
+
+    &:active {
+      background-color: #51b8e8;
+    }
+  }
+
+  &RON {
+    background-color: #c78138;
+
+    &:hover {
+      background-color: #df994e;
+    }
+
+    &:active {
+      background-color: #c78138;
+    }
+  }
+
+  &LTD {
+    background-color: #69d;
+
+    &:hover {
+      background-color: #79a9e8;
+    }
+
+    &:active {
+      background-color: #69d;
+    }
+  }
+
+  &Globe {
+    background-color: #d64154;
+
+    &:hover {
+      background-color: #da4f62;
+    }
+
+    &:active {
+      background-color: #d64154;
+    }
+  }
+}
+
+.Indicator {
+  height: 20px;
+
+  &Wrapper {
+    position: relative;
+  }
+
+  &Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    font-size: var(--font-small);
+    text-shadow: 0 0 3px var(--color-bg);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+  }
+
+  [class*='Indicator__'] {
+    background-color: #ccc;
+    box-shadow: inset 0 0 5px 0 #000a;
+  }
+}

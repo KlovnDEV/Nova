@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ES2017",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "pretty": true,
+    "newLine": "CRLF",
+    "alwaysStrict": false,
+    "noImplicitUseStrict": true,
+    "strict": false,
+    "lib": ["es2017", "DOM"]
+  },
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/__tests__/*"
+  ]
+}

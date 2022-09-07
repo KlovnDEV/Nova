@@ -1,0 +1,62 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 29.5% 69.5%;
+  gap: 0 1%;
+  padding: 10px 0;
+}
+
+.Search {
+  &Box {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  &Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, border-width 0.1s ease-in-out;
+
+    &:hover {
+      border-width: 2px;
+      border-color: #1976d2;
+      color: #1976d2;
+    }
+  }
+}
+
+.New {
+  /*
+      width: 64px;
+  height: 64px;
+  margin: 6px;
+  */
+  &Wrapper {
+    width: 100%;
+    height: 300px;
+  }
+
+  &Button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    color: #444;
+    box-shadow: 1px 2px 3px 0 #00000060;
+
+    svg {
+      width: 64px;
+      height: 64px;
+      fill: #bbb;
+    }
+  }
+}

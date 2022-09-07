@@ -1,0 +1,46 @@
+// global uils
+
+@use './utils' as *;
+@use './themes/dark' as *;
+@use './themes/light' as *;
+@use './utils/reset' as *;
+@use './utils/fonts' as *;
+
+body {
+  background-color: transparent;
+}
+
+.Theme {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: var(--color-font);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  transition: opacity 0.3s ease;
+}
+
+.inherit {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  &-color {
+    color: inherit;
+  }
+
+  &-fw {
+    font-weight: inherit;
+  }
+
+  &-fs {
+    font-size: inherit;
+  }
+
+  &-lh {
+    line-height: inherit;
+  }
+}

@@ -1,0 +1,8 @@
+dist/
+lib/
+types/
+compiled/
+node_modules/
+package-lock.json
+.idea
+.awcache

@@ -1,0 +1,39 @@
+@use 'libs/UI/Utils/colors';
+
+.error-boundary {
+  padding: 10px;
+  line-height: 1.5;
+
+  &__header {
+    margin-top: 10px;
+    color: #f55;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__icon {
+    margin-top: 20px;
+
+    svg {
+      fill: #f44;
+    }
+  }
+
+  &__button {
+    background-color: colors.$primary;
+
+    .button {
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  &__message {
+    font-size: 14px;
+  }
+
+  &__stack {
+    color: #666;
+    font-size: 12px;
+  }
+}

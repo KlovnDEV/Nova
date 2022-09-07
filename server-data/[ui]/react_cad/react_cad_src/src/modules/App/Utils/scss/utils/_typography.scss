@@ -1,0 +1,47 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+// .h1 {
+//   font-size: rem(96); // converts 96px to rem
+//   line-height: rem(118);
+//   letter-spacing: rem(-1.5);
+// }
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align-last: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.inherit {
+  font-weight: inherit;
+  font-size: inherit;
+
+  &-weight {
+    font-weight: inherit;
+  }
+
+  &-size {
+    font-size: inherit;
+  }
+}

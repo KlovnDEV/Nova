@@ -1,0 +1,13 @@
+.Preview {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+  border: 1px solid var(--color-active-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg);
+  box-shadow: inset 4px 4px 16px var(--color-active);
+  opacity: 0.75;
+  cursor: move;
+  pointer-events: none;
+  user-select: none;
+}

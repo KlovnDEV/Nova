@@ -1,0 +1,5 @@
+@mixin defaults() {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}

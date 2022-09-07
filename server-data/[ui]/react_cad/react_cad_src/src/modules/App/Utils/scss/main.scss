@@ -1,0 +1,32 @@
+// global uils
+
+@use './utils/vars' as *;
+@use './utils/mixins' as *;
+@use './utils/reset' as *;
+@use './utils/fonts' as *;
+@use './utils/typography' as *;
+
+// global rules
+button {
+  padding: 0;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+body {
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  background-size: 100% 100%;
+}

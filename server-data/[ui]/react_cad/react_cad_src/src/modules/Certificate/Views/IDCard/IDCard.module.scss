@@ -1,0 +1,128 @@
+.Passport {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 12px;
+  background: #1f2126;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.22);
+  line-height: 1.25;
+
+  &Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    object-position: center;
+    mix-blend-mode: soft-light;
+  }
+
+  &Wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 1.5em 0.75em;
+  }
+
+  &Inner {
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    gap: 0 1.75em;
+  }
+
+  &Face {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-position: center;
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+
+    &Row {
+      display: grid;
+      grid-template-columns: 8em 8em;
+      gap: 0.5em;
+    }
+
+    &Label,
+    &Descr {
+      min-height: 1.25em;
+      margin: 0;
+      margin-bottom: 0.15em;
+      font-size: 1em;
+    }
+
+    &Label {
+      color: #727272;
+      font-weight: 400;
+      text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+    }
+
+    &Descr {
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &Photo {
+    position: relative;
+  }
+}
+
+.Header {
+  margin: 0;
+  color: #e4af45;
+  font-weight: 600;
+  font-size: 1.25em;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.Subheader {
+  margin: 16px 0 32px;
+  color: #dadada;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.QR {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 0;
+  display: block;
+  object-fit: cover;
+  width: 4em;
+  height: 4em;
+  filter: invert(1) sepia(1);
+  object-position: center;
+}
+
+.Signature {
+  position: absolute;
+  right: 0.25em;
+  bottom: -0.25em;
+  margin: 0;
+  color: #fff;
+  font-size: 2.5em;
+  font-family: 'signature', sans-serif;
+  line-height: 1;
+  text-align: right;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+  transform: rotate(-20deg);
+}

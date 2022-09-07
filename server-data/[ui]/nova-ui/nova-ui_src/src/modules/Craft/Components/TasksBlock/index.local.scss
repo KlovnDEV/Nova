@@ -1,0 +1,31 @@
+@use 'scss/utils' as *;
+
+.Que {
+  position: relative;
+  display: grid;
+  grid-column: 1/3;
+  grid-auto-columns: 140px;
+  grid-auto-flow: column;
+  gap: 8px;
+  padding: 4px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg);
+
+  &Control {
+    overflow: hidden;
+    max-width: 140px;
+    padding: 5px;
+
+    [class*='Children__'] {
+      display: block;
+      overflow: hidden;
+      max-width: 120px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &Progress {
+    height: 2px;
+  }
+}

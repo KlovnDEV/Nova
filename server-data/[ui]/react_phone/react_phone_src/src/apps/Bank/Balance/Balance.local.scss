@@ -1,0 +1,46 @@
+.screen {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  height: 100%;
+}
+
+.body {
+  padding: 5px 10px;
+
+  &Header {
+    margin: 12px;
+    font-size: 22px;
+  }
+
+  &Descr {
+    font-size: 24px;
+
+    &Amount {
+      font-size: 28px;
+    }
+  }
+}
+
+.transfer {
+  &Descr {
+    margin: 10px 0;
+    color: #eee;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 1px;
+  }
+}
+
+.contacts {
+  position: relative;
+  height: 100%;
+  padding: 10px 0 10px 10px;
+  border-top: 1px solid #444;
+
+  div {
+    color: #fff;
+  }
+}

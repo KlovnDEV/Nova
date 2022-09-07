@@ -1,0 +1,44 @@
+@use 'libs/UI/Utils/position';
+
+.dial {
+  &__button {
+    &:focus {
+      background-color: #ddd;
+    }
+
+    &-description {
+      height: 12px;
+      color: #aaa;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__backspace {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__phoneNumber {
+    position: relative;
+    width: 100%;
+    height: 68px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 20px;
+  }
+}

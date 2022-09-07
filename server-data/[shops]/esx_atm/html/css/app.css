@@ -1,0 +1,131 @@
+@font-face {
+	font-family: roboto;
+	src: url('../roboto.ttf');
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: roboto;
+}
+
+#container {
+	position: absolute;
+	background: linear-gradient(#000000d4, #212121d4);
+	height: 600px;
+	width: 860px;
+	top: 50%;
+	left: 50%;
+	margin: -300px 0 0 -430px;
+	cursor: default;
+	color: white;
+}
+
+#header {
+	display: block;
+	width: 100%;
+	height: 75px;
+	border-bottom: 1px solid #3c3c3c;
+}
+
+.container-body {
+    padding-left: 17px;
+    padding-top: 17px;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+#header .button {
+    height: 65px;
+    line-height: 65px;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: #80dcad 3px solid;
+    color: white;
+    font-size: 17pt;
+    font-family: sans-serif;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#header .button:hover {
+    color: #ffffff;
+    border-bottom: #90fcdd 3px solid;
+}
+
+#logo {
+	height: 55px;
+	margin: 10px;
+	float: left;
+}
+
+.account-header {
+	font-size: 25px;
+}
+
+.account-body {
+	padding-left: 250px;
+}
+
+.account-value {
+	color: #ccffdd;
+}
+
+input {
+    margin: 0 20px 0 0;
+    background: linear-gradient(#232323, #2d2d2d);
+    border-radius: 5px;
+    border: 1px solid #008942;
+    color: white;
+    padding: 0 0 0 10px;
+    height: 40px;
+    font-size: 16pt;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0;
+	/* <-- Apparently some margin are still there even though it's hidden */
+}
+
+button {
+    background: linear-gradient(0deg, #409267, #6bd46b);
+    border-radius: 3px;
+    border: 2px solid #66a766;
+    color: #e5ffe5;
+    font-size: 16pt;
+    font-weight: bold;
+    height: 40px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.bank-btn {
+	width: 200px;
+}
+
+.amount-input {
+	width: 300px;
+}
+
+#transaction-table {
+	width: 98%;
+	color: white;
+	border-collapse: collapse;
+}
+
+#transaction-table th {
+	background-color: #006633a0;
+}
+
+#transaction-table td {
+	border: 1px solid #006633a0;
+	padding: 5px;
+}

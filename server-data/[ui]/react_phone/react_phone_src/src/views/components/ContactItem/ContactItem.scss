@@ -1,0 +1,33 @@
+@use 'libs/UI/Utils/colors';
+@use 'libs/UI/Utils/animation';
+
+.contact {
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__letter {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #275fb3;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  &__description {
+    padding: 4px 0 0;
+    color: #999;
+    font-size: 12px;
+  }
+
+  &__call-button {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    cursor: 'pointer';
+  }
+}

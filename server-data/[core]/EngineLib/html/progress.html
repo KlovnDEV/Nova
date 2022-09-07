@@ -1,0 +1,110 @@
+<html>
+<head>
+<style>
+
+html, body {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+</style>
+</head>
+<body>
+
+<progress-ring stroke="16" radius="140" progress="0"></progress-ring>
+
+<script>
+class ProgressRing extends HTMLElement {
+//#67bcffd6
+  constructor() {
+    super();
+    const stroke = this.getAttribute('stroke');
+    const radius = this.getAttribute('radius');
+    const normalizedRadius = radius - stroke * 2;
+    this._circumference = normalizedRadius * 2 * Math.PI;
+
+    this._root = this.attachShadow({mode: 'open'});
+    this._root.innerHTML = `
+      <svg
+        height="${radius * 2}"
+        width="${radius * 2}"
+        shape-rendering="geometricPrecision"
+       >
+
+         <circle
+           stroke="#000000a6"
+           stroke-width="${stroke}"
+           fill="transparent"
+           r="${normalizedRadius}"
+           cx="${radius}"
+           cy="${radius}"
+        />
+
+         <circle
+           class="progress"
+           stroke="#10a8ffff"
+           stroke-linecap="round"
+           stroke-dasharray="${this._circumference} ${this._circumference}"
+           style="stroke-dashoffset:${this._circumference}"
+           stroke-width="${stroke-6}"
+           fill="transparent"
+           r="${normalizedRadius}"
+           cx="${radius}"
+           cy="${radius}"
+        />
+
+        <text class="value" x="${radius}" y="${radius}" text-anchor="middle" font-size="${radius * 0.7}" fill="#10a8ffff" stroke="#00000040" stroke-width="4px" font-family="sans-serif" font-weight="bold" alignment-baseline="middle"></text>
+        <text x="${radius}" y="${radius * 1.4}" text-anchor="middle" font-size="${radius * 0.3}" fill="#10a8ffff" stroke="#00000040" stroke-width="4px" font-family="sans-serif" font-weight="bold" alignment-baseline="middle">%</text>
+      </svg>
+
+      <style>
+        circle {
+          transition: stroke-dashoffset 0.35s;
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+        }
+      </style>
+    `;
+  }
+  
+  setProgress(percent) {
+    const offset = this._circumference - (percent / 100 * this._circumference);
+    const circle = this._root.querySelector('circle.progress');
+    const text = this._root.querySelector('text.value');
+    circle.style.strokeDashoffset = offset; 
+    text.textContent = Math.floor(progress) + '';
+  }
+
+  static get observedAttributes() {
+    return ['progress'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'progress') {
+      this.setProgress(newValue);
+    }
+  }
+}
+
+window.customElements.define('progress-ring', ProgressRing);
+
+// emulate progress attribute change
+let progress = 0;
+const el = document.querySelector('progress-ring');
+
+const interval = setInterval(() => {
+  progress += 10;
+  el.setAttribute('progress', progress);
+  if (progress === 100)
+    progress = 0;
+    //clearInterval(interval);
+}, 1000);
+</script>
+</body>
+</html>

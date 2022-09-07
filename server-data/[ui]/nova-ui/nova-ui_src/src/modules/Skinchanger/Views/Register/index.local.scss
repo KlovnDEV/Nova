@@ -1,0 +1,9 @@
+@use 'scss/utils' as *;
+
+.AgeSex {
+  display: grid;
+  grid-template-columns: 1fr 64px 64px;
+  gap: 10px;
+  width: 100%;
+  height: 64px;
+}

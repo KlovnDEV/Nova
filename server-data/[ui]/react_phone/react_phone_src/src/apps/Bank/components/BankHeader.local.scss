@@ -1,0 +1,21 @@
+.header {
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: 1px;
+
+  &__wrapper {
+    grid-column: 1 / -1;
+    padding: 0 10px;
+  }
+
+  &__time {
+    color: #eee;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,78 @@
+@use 'scss/utils' as *;
+
+%wrapper {
+  display: grid;
+  gap: 5px;
+  height: 100%;
+}
+
+%sided {
+  @extend %wrapper;
+
+  grid-template-columns: 1fr min-content;
+  height: auto;
+}
+
+.Top {
+  @extend %wrapper;
+
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 100%;
+}
+
+.Right {
+  @extend %sided;
+
+  .Tabs {
+    grid-row: 1;
+    grid-column: 1 / 1;
+  }
+
+  [class*='ControlWrapper__'] {
+    grid-row: 1;
+    grid-column: 2 / -1;
+  }
+}
+
+.Left {
+  @extend %sided;
+
+  .Tabs {
+    grid-row: 1;
+  }
+
+  [class*='ControlWrapper__'] {
+    grid-row: 1;
+  }
+}
+
+.Tabs {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+
+.Search {
+  padding-right: 38px;
+  border: 1px solid var(--color-font);
+
+  &:focus {
+    border-color: var(--color-hover);
+  }
+
+  &Wrapper {
+    position: relative;
+  }
+
+  &Icon {
+    @include size (30px);
+
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,24 @@
+Locales['ru'] = {
+    ['menu_title'] = 'Лос Сантос Мол',
+    ['sell_menu'] = 'Продажа',
+    ['ammo_label'] = ' Ammo', -- не менять!
+    ['mall_info_header'] = '[Лос Сантос Мол]',
+    ['mall_info_body'] = 'New item offer %s has been added into mall!', -- пока что не работает
+    ['error_empty_value'] = 'Необходимо сначала выбрать товар на продажу!',
+    ['error_empty_qty'] = 'Необходимо задать количество!',
+    ['error_empty_price'] = 'Необходимо задать цену!',
+    ['error_nan_qty'] = 'Количество должно быть числом!',
+    ['error_nan_price'] = 'Цена должна быть числом!',
+    ['error_qty_failure'] = 'У тебя нет такого количества в инвентаре!',
+    ['error_by_form'] = 'Ты не заполнил все необходимые поля!',
+    ['qty_greater_than_available'] = 'Количество не может превышать того что есть в наличии!',
+    ['error_money'] = 'У тебя недостаточно денег на банковком счёте!',
+    ['error_try_again'] = 'Что-то пошло не так. Попробуй ещё раз!',
+    ['notify_player_placed_item'] = '~y~[Мол]: ~w~Ты выложил ~b~%s %s ~w~на продажу',
+    ['blip_sell'] = 'Склад Мола',
+    ['sell_notification'] = 'Нажми ~INPUT_CONTEXT~ для того что-бы открыть ~y~меню продажи',
+    ['buy_notification'] = 'Нажми ~INPUT_CONTEXT~ для того что-бы открыть ~y~меню покупки',
+    ['blip_buy'] = 'Лос Сантос Мол',
+    ['notify_target_sold_items'] = '~y~[Мол]: ~b~%s %s ~w~было только что продано',
+    ['notify_player_bought_items'] = '~y~[Мол]: ~w~Ты купил ~b~%s %s ~w~за ~g~%s$',
+}

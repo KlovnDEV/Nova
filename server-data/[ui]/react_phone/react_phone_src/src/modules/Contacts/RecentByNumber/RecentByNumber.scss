@@ -1,0 +1,75 @@
+@use 'libs/UI/Utils/position';
+@use 'libs/UI/Utils/animation';
+
+@function randomColor() {
+  $colors: #f44336, #ff9800, #ffeb3b, #8bc34a, #2196f3, #9c27b0;
+  @return lighten(nth($colors, random(length($colors))), 20%);
+}
+@function randomGradient() {
+  @return linear-gradient(217deg, randomColor(), transparent 70.71%),
+    linear-gradient(127deg, randomColor(), transparent 70.71%),
+    linear-gradient(336deg, randomColor(), transparent 70.71%);
+}
+
+.recents {
+  &__page {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  &__upper {
+    position: relative;
+    background: randomGradient();
+  }
+
+  &__buttons {
+    padding: 2px 0 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__favorite-button {
+    margin-right: 10px;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+
+    // svg {
+    //   filter: saturate(4000%) hue-rotate(15deg);
+    //   height: 50%;
+    //   object-fit: contain;
+    // }
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 14px;
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0 1px 1px #ffffffad;
+  }
+
+  &__phone {
+    max-width: 100%;
+    margin: 15px 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+    &-number {
+      width: 100%;
+      margin: 15px 0;
+
+      svg {
+        display: block;
+        margin-right: 5px;
+      }
+    }
+  }
+}

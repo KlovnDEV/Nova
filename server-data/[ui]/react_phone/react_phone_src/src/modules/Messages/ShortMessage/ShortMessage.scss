@@ -1,0 +1,53 @@
+@use 'libs/UI/Utils/colors';
+
+.short-message {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-position: center;
+  cursor: pointer;
+  user-select: none;
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &_incoming {
+    flex-direction: row;
+
+    .short-message__avatar {
+      align-self: flex-end;
+      margin-right: 15px;
+    }
+  }
+
+  &_outgoing {
+    flex-direction: row-reverse;
+
+    .short-message__avatar {
+      align-self: flex-start;
+      margin-left: 15px;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__text {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+  }
+
+  &__date {
+    margin-top: 5px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+  }
+}

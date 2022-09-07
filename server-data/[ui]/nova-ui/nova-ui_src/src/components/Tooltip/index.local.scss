@@ -1,0 +1,44 @@
+@use 'scss/utils' as *;
+
+$arrow-position: -20px;
+
+.Tooltip {
+  z-index: 10;
+  display: block;
+  max-width: 200px;
+  padding: 5px;
+  padding: 5px;
+  border-radius: calc(var(--border-radius) * 2);
+  background-color: var(--color-bg);
+  color: var(--color-font-active);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.is {
+    &-top {
+      &::after {
+        top: unset;
+        bottom: $arrow-position;
+        transform: rotate(180deg);
+      }
+    }
+
+    &-bottom {
+      &::after {
+        top: $arrow-position;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--color-bg);
+  }
+}

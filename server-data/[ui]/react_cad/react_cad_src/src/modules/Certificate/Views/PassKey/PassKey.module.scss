@@ -1,0 +1,152 @@
+.Passport {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 12px;
+  background-image: linear-gradient(172deg, rgb(130, 130, 130) 0%, rgb(51, 54, 61) 100%);
+  color: rgba(0, 0, 0, 0.639);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.22);
+  line-height: 1.25;
+  background-blend-mode: screen;
+
+  &Background {
+    position: absolute;
+    top: -85px;
+    left: -80px;
+    z-index: 0;
+    display: block;
+    width: auto;
+    height: 100%;
+    opacity: 0.4;
+    object-position: center;
+    mix-blend-mode: soft-light;
+  }
+
+  &Wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 0.5em 0.75em;
+  }
+
+  &Inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &Face {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-position: center;
+  }
+
+  &Info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &Number {
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 1.4em;
+      line-height: 1;
+      text-align: right;
+
+      &Wrapper {
+        display: flex;
+        flex: 0 0 50%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    &Descr {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      font-weight: 400;
+      font-size: 3em;
+      line-height: 1;
+
+      &:first-child {
+        flex: 0 0 50%;
+        min-height: 2em;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  &Photo {
+    position: relative;
+  }
+
+  &Noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: repeat;
+    opacity: 0.8;
+    mix-blend-mode: soft-light;
+  }
+}
+
+.Header {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 5em;
+  line-height: 1;
+  text-align: right;
+}
+
+.Subheader {
+  margin: 16px 0 32px;
+  color: #dadada;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: left;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.QR {
+  display: block;
+  object-fit: cover;
+  width: 5em;
+  height: 5em;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.Variation {
+  &-0 {
+    background-color: #77733b;
+  }
+
+  &-1 {
+    background-color: #30a018;
+  }
+
+  &-2 {
+    background-color: #eb5757;
+  }
+
+  &-3 {
+    background-color: #0090a6;
+  }
+
+  &-4 {
+    background-color: rgba(0, 0, 0, 0.22);
+    color: rgba(255, 255, 255, 0.69);
+  }
+}

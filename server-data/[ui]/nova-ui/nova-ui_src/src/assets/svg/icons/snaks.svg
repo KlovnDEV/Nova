@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+	 viewBox="0 0 512 512">
+<g>
+	<polygon style="fill:#EC4B24;" points="77.434,120.5 47.434,0 0,0 0,241 47.434,241 	"/>
+	<polygon style="fill:#EC4B24;" points="0,271 0,512 47.434,512 77.434,391.5 47.434,271 	"/>
+</g>
+<polygon style="fill:#E52929;" points="256,15 136,120.5 256,226 449.566,226 449.566,15 "/>
+<rect x="62.43" y="15" style="fill:#EC4B24;" width="193.57" height="211"/>
+<polygon style="fill:#FCA934;" points="374.566,60 256,60 181,120.5 256,181 374.566,181 "/>
+<rect x="137.43" y="60" style="fill:#FFC44F;" width="118.57" height="121"/>
+<polygon style="fill:#BF2724;" points="47.434,0 47.434,241 92.434,226 92.434,15 "/>
+<polygon style="fill:#E52929;" points="464.566,0 434.566,120.5 464.566,241 512,241 512,0 "/>
+<polygon style="fill:#BF2724;" points="419.566,15 419.566,226 464.566,241 464.566,0 "/>
+<polygon style="fill:#E52929;" points="256,286 136,391.5 256,497 449.566,497 449.566,286 "/>
+<rect x="62.43" y="286" style="fill:#EC4B24;" width="193.57" height="211"/>
+<polygon style="fill:#FCA934;" points="374.566,331 256,331 181,391.5 256,452 374.566,452 "/>
+<rect x="137.43" y="331" style="fill:#FFC44F;" width="118.57" height="121"/>
+<polygon style="fill:#BF2724;" points="47.434,271 47.434,512 92.434,497 92.434,286 "/>
+<polygon style="fill:#E52929;" points="464.566,271 434.566,391.5 464.566,512 512,512 512,271 "/>
+<polygon style="fill:#BF2724;" points="419.566,286 419.566,497 464.566,512 464.566,271 "/>
+</svg>

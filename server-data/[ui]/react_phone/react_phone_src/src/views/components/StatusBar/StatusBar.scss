@@ -1,0 +1,21 @@
+.status-bar {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 20px 6px 24px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  user-select: none;
+  transition: all 0.5s ease;
+
+  &__rightpane {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    height: 14px;
+    margin: -2px 4px 0;
+  }
+}

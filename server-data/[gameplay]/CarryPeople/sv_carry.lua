@@ -1,0 +1,12 @@
+RegisterServerEvent('cmg2_animations:sync')
+AddEventHandler('cmg2_animations:sync', function(target, ct)
+--	print("got to srv cmg2_animations:sync")
+	TriggerClientEvent('cmg2_animations:syncTarget', target, source, ct)
+--	print("triggering to target: " .. tostring(targetSrc))
+	TriggerClientEvent('cmg2_animations:syncMe', source, ct)
+end)
+
+RegisterServerEvent('cmg2_animations:stop')
+AddEventHandler('cmg2_animations:stop', function(targetSrc)
+	TriggerClientEvent('cmg2_animations:cl_stop', targetSrc)
+end)

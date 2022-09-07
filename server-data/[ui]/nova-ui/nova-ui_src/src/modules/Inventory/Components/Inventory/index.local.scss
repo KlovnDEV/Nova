@@ -1,0 +1,23 @@
+@use 'scss/utils' as *;
+
+$inventory-back-color: var(--color-bg-lighten);
+$inventory-border-color: var(--color-bg);
+
+.Inventory {
+  display: grid;
+  border: 2px solid $inventory-border-color;
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  background:
+    linear-gradient($inventory-border-color 0,
+    transparent 5%,
+    transparent 94%,
+    $inventory-border-color 100%),
+    linear-gradient(90deg,
+    $inventory-border-color 0,
+    transparent 5%,
+    transparent 95%,
+    $inventory-border-color 100%),
+    $inventory-back-color;
+  background-size: 16px 16px;
+}

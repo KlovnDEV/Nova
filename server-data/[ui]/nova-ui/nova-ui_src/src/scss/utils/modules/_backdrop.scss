@@ -1,0 +1,47 @@
+%backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--border-radius);
+  border-image-slice: 1;
+  background-color: var(--color-bg);
+  pointer-events: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+%backdrop-hover-slice {
+  border-image-source: linear-gradient(135deg, var(--color-active-gradient-from) 0%, var(--color-active-gradient-to) 100%);
+}
+
+%backdrop-focus-slice {
+  border-image-source: linear-gradient(135deg, var(--color-active-gradient-from) 100%, var(--color-active-border) 100%);
+}
+
+%backdrop-hover {
+  border-color: var(--color-active-border);
+}
+
+%backdrop-active {
+  @extend %backdrop-hover;
+
+  box-shadow: inset 4px 4px 16px var(--color-active);
+}
+
+%sliced-border {
+  border-image-slice: 1;
+}
+
+%unsliced-border {
+  border-image-source: unset;
+  border-image-slice: unset;
+}

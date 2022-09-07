@@ -1,0 +1,13 @@
+@use 'scss/utils' as *;
+
+.ShopGrid {
+  @extend %scroll;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+  gap: 16px;
+  overflow: auto;
+  height: 85vh;
+  padding: 5px 5px 20px 0;
+}

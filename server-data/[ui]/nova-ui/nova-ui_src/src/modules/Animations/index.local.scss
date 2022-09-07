@@ -1,0 +1,84 @@
+@use 'scss/utils' as *;
+
+.Animations {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-auto-flow: dense;
+  gap: 2px;
+  width: 828px;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(260.34deg, rgba(31, 36, 38, 0.2) 2.92%, rgba(51, 59, 64, 0.2) 100%);
+
+  &Wrapper {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.Item {
+  grid-row: span 1;
+  grid-column: span 1;
+  padding: 10px;
+
+  [class*='Children__'] {
+    opacity: 1;
+  }
+
+  &Head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &Anchor {
+    margin-right: calc(var(--font-regular) * -1);
+    color: rgba(206, 224, 242, 0.8);
+    font-weight: var(--bold);
+    font-size: var(--font-regular);
+    line-height: 1.25;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+  }
+
+  &Icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+
+  &Text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: var(--color-font-active);
+    font-weight: var(--medium);
+    font-size: var(--font-small);
+    line-height: 1;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+  }
+
+  &Favorite {
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+
+    .is-favorite {
+      filter: unset;
+    }
+
+    &Wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

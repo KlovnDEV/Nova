@@ -1,0 +1,43 @@
+.Tabs {
+  &Wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+
+  &Button {
+    margin-right: 16px;
+    padding: 4px 16px;
+    border-radius: 4px;
+    background-color: rgba(63, 71, 86, 0.12);
+    font-size: 18px;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[class~='is-active'] {
+      background-color: #43a7d6;
+    }
+  }
+
+  &Content {
+    display: none;
+
+    &[class~='is-active'] {
+      display: block;
+    }
+  }
+
+  &Body {
+    display: block;
+  }
+}

@@ -1,0 +1,101 @@
+.text-field-outlined {
+  @include text-field;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+    transition:
+      color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+      transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transform: translate(14px, 0) scale(0.75);
+    transform-origin: top left;
+  }
+
+  &__control {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    cursor: text;
+  }
+
+  &__input {
+    padding: 18.5px 14px 14px;
+    border: 0;
+    outline: 0;
+  }
+
+  &__outline {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 8px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: inherit;
+    pointer-events: none;
+
+    legend {
+      display: none;
+      width: auto;
+      height: 11px;
+      padding: 0 5px;
+      font-size: 0.75em;
+      text-align: left;
+      visibility: hidden;
+      transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    }
+  }
+}
+
+:not(.focused).empty.text-field-outlined {
+  &__label {
+    transform: translate(14px, 20px) scale(1);
+  }
+}
+
+:not(.empty).text-field-outlined {
+  &__outline {
+    legend {
+      display: block;
+      max-width: 1000px;
+      transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
+    }
+  }
+}
+
+.focused.text-field-outlined {
+  &__label {
+    color: colors.$primary;
+  }
+
+  &__outline {
+    border-width: 2px;
+    border-color: colors.$primary;
+
+    legend {
+      display: block;
+      max-width: 1000px;
+      transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
+    }
+  }
+}

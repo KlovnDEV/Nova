@@ -1,0 +1,20 @@
+//- mixin wrapper(classname)
+//-   div(class=classname + '__container')
+//-     div(class=classname + '__row')
+//-       if block
+//-         block
+
+//- mixin pic(classname, srcset, alt)
+//-   - classname = classname || '';
+//-   - alt = alt || '';
+//-   - srcset = srcset || [];
+//-   - picname = srcset[0].src.substring(srcset[0].src.lastIndexOf("/") + 1, srcset[0].src.lastIndexOf("."));
+//-   picture(class=classname)
+//-     each img in srcset
+//-       source(srcset=img.src, media="(min-width:" + img.media + "px)")
+//-     img(src="./assets/img/" + picname + ".webp", alt=alt)
+
+//- mixin icon(classname, name)
+//-   - classname = classname || ''
+//-   svg(class=classname)
+//-     use(xlink:href="./assets/img/svg/sprite.svg#" + name)

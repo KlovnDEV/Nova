@@ -1,0 +1,76 @@
+@use 'scss/utils' as *;
+
+.Wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+}
+
+.Label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-font);
+}
+
+%input {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-font);
+  font-weight: var(--medium);
+  font-size: var(--font-regular);
+}
+
+input.Input {
+  @extend %input;
+}
+
+textarea.Input {
+  @extend %input;
+  @extend %scroll;
+
+  max-height: 130px;
+  resize: none;
+  appearance: none;
+}
+
+.Input {
+  &:focus,
+  &:active {
+    color: var(--color-font-active);
+
+    ~ .Backdrop {
+      border-image-source: linear-gradient(135deg, rgba(0, 255, 238, 1) 0%, rgba(0, 255, 238, 0) 100%);
+      box-shadow: inset 4px 4px 16px var(--color-active);
+    }
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+}
+
+.Backdrop {
+  @extend %backdrop;
+
+  z-index: 0;
+  border: 1px solid transparent;
+  border-image-slice: 1;
+}

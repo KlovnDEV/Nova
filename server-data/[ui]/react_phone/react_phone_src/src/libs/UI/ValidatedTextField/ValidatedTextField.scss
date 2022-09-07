@@ -1,0 +1,28 @@
+@use 'libs/UI/Utils/colors';
+
+.validated-text-field {
+  &.fullwidth {
+    width: 100%;
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none !important;
+  }
+
+  &__accept {
+    fill: colors.$start;
+  }
+
+  &__cancel {
+    fill: colors.$stop;
+  }
+
+  &__edit {
+    fill: colors.$button-dark;
+  }
+}

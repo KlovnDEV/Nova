@@ -1,0 +1,11 @@
+.applications {
+  &__screen {
+    background-color: transparent;
+
+    &_grid {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

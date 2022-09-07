@@ -1,0 +1,11 @@
+.Content {
+  padding: 10px 10px 0 0;
+}
+
+.HideInnerScrollbar {
+  * {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

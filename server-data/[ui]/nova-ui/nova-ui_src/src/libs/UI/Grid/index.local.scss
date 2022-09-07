@@ -1,0 +1,7 @@
+@use 'scss/utils/index' as *;
+
+.Wrapper {
+  @extend %scroll;
+
+  display: grid;
+}

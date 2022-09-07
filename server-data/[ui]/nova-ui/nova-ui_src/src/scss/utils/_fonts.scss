@@ -1,0 +1,7 @@
+@use './_mixins' as *;
+
+@include font-face('Commissioner', 'assets/fonts/Commissioner-Regular', 400);
+@include font-face('Commissioner', 'assets/fonts/Commissioner-Bold', 700);
+@include font-face('Commissioner', 'assets/fonts/Commissioner-SemiBold', 600);
+@include font-face('Commissioner', 'assets/fonts/Commissioner-Medium', 500);
+@include font-face('Commissioner', 'assets/fonts/Commissioner-Light', 300);

@@ -1,0 +1,9 @@
+@use 'libs/UI/Utils/animation';
+
+.menu-list-item {
+  &__description {
+    padding: 4px 0 0;
+    color: #999;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,120 @@
+@use 'scss/utils' as *;
+
+%button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--color-font-active);
+  outline: 0;
+  font-weight: var(--normal);
+  font-size: var(--font-regular);
+  line-height: var(--line-height);
+  transition: all 0.3s ease;
+}
+
+%button-default-ext {
+  &.is-active,
+  &:active {
+    .Backdrop {
+      @extend %backdrop-active;
+    }
+
+    .Children {
+      opacity: 1;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    outline: 0;
+
+    .Children {
+      opacity: 0.75;
+    }
+  }
+
+  &:focus {
+    .Backdrop {
+      @extend %backdrop-focus-slice;
+    }
+  }
+
+  &:hover {
+    .Backdrop {
+      @extend %backdrop-hover-slice;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    pointer-events: none;
+  }
+}
+
+%button-rounded-ext {
+  border-radius: 100%;
+
+  .Backdrop {
+    @extend %unsliced-border;
+
+    border-radius: 100%;
+  }
+
+  &.is-active,
+  &:active {
+    .Backdrop {
+      @extend %backdrop-active;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .Backdrop {
+      @extend %backdrop-hover;
+    }
+  }
+}
+
+%children {
+  position: relative;
+  z-index: 1;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  width: 100%;
+  height: inherit;
+  max-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  opacity: 0.5;
+}
+
+.Backdrop {
+  @extend %backdrop;
+  @extend %sliced-border;
+
+  z-index: 0;
+}
+
+.Button {
+  @extend %button;
+  @extend %button-default-ext;
+
+  &.rounded {
+    @extend %button-rounded-ext;
+  }
+}
+
+.Children {
+  @extend %children;
+}

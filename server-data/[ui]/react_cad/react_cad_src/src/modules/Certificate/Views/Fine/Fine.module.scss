@@ -1,0 +1,156 @@
+.Body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.22);
+}
+
+.Logo {
+  z-index: 2;
+  display: block;
+  object-fit: contain;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  object-position: center;
+}
+
+.Banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.515);
+  }
+
+  &Bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    filter: blur(4px);
+    object-position: center;
+  }
+
+  &Inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px 20px;
+  }
+
+  &Details {
+    min-width: 200px;
+  }
+}
+
+.Inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+}
+
+.Header {
+  grid-column: 1/-1;
+  margin-bottom: 32px;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Paragraph {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: justify;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+.From,
+.To {
+  margin-bottom: 16px;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.Row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 2px 8px;
+  border: 1px solid #000;
+
+  &:nth-last-child(3) {
+    border-left: 0;
+  }
+
+  &:nth-last-child(2) {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  &Fluid {
+    grid-column: 1/-1;
+  }
+}
+
+.Footer {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 15px 60px;
+
+  &Label {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &Descr {
+    min-height: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.Signature {
+  font-size: 42px;
+  font-family: 'signature', sans-serif;
+  transform: rotate(-20deg);
+}
