@@ -1,2 +1,2 @@
-cd dbbridge_node
+cd .\utils\dbbridge_node
 node index.js

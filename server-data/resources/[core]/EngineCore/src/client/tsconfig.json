@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig-base.json",
+  "optimization": {
+    "minimize": true
+  },
+
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "../compiled",
+    "types": ["@citizenfx/client", "@types/node", "@types/events"],
+    "paths": {
+      "client/*": ["./*"],
+      "shared/*": ["../shared/*"]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "include": ["./**/*.ts", "../shared/**/*.ts"]
+}

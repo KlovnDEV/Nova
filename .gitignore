@@ -6,7 +6,6 @@
 /server-data/logs/positions/positions.txt
 *.out
 /reports/
-/server-data/permissions.cfg
 /server-data/resources/\[admin\]/
 node_modules
 /server-native
